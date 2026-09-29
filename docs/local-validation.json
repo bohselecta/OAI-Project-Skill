@@ -5,7 +5,7 @@
     "architecture": "x86_64"
   },
   "result": "PASS",
-  "tests": 57,
+  "tests": 58,
   "skipped": 0,
   "evidence_type": "deterministic-tooling-and-fixture-checker-tests",
   "command": "python3 -m unittest discover -s tests -v",
@@ -13,11 +13,11 @@
     "scripts/project_tool.py": "767fe455d813e199ce6828b5fbd80c472057f6edfc31a6accf86ade78168393c",
     "evals/run.py": "05bc2b8b5a6ceeb5c39f35159c3253129ed9ed76badf757c6e7d130970c40963",
     "tests/test_project_tool.py": "9a3ae277a2fe4b9cad1ce05900d1b93216b70b1ef3220af622e1057dff6d5676",
-    "tests/test_evals.py": "b2e8cff243731453538ce456c9eeebcccc272a0713b9ba8a858a5de9cdaaccb8",
+    "tests/test_evals.py": "563d5d4ba8853eaf8267e29b9728088db5b605a2dc314b1b5a8ab0a320f74fe5",
     "tests/test_repository.py": "73088e24e588806854de191d3de6a2c0c425f13bb2fc2aaa04edaff471dc2dc3"
   },
   "skill_manifest_sha256": "44e8f95f8ba4485ba9a4b3b568a5465c7e72868240f1557f9d2e37573b7cf0ac",
   "native_host_trials": "NOT_RUN",
   "plugin_import": "NOT_RUN",
-  "remote_ci": "PENDING"
+  "remote_ci_source": "https://github.com/bohselecta/OAI-Project-Skill/pull/1/checks"
 }

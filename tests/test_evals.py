@@ -50,9 +50,14 @@ class EvalHarnessTests(unittest.TestCase):
         self.assertEqual(marker['preserve']['OWNER-NOTES.md'], evals.tool.digest(self.dest / 'OWNER-NOTES.md'))
     def test_platform_line_endings_are_accepted(self):
         evals.prepare('natural-cli', self.dest)
-        solution = SLUG_SOLUTION.replace('print(value)', 'sys.stdout.write(value + \"\\r\\n\")')
+        solution = SLUG_SOLUTION.replace('print(value)', 'sys.stdout.buffer.write((value + \"\\r\\n\").encode(\"utf-8\"))')
         (self.dest / 'slug.py').write_text(solution, encoding='utf-8')
         self.assertEqual(evals.check(self.dest, True)['result'], 'PASS')
+    def test_malformed_double_carriage_return_is_rejected(self):
+        evals.prepare('natural-cli', self.dest)
+        solution = SLUG_SOLUTION.replace('print(value)', 'sys.stdout.buffer.write((value + \"\\r\\r\\n\").encode(\"utf-8\"))')
+        (self.dest / 'slug.py').write_text(solution, encoding='utf-8')
+        self.assertEqual(evals.check(self.dest, True)['result'], 'FAIL')
     def test_existing_trial_not_overwritten(self):
         evals.prepare('natural-cli', self.dest)
         with self.assertRaises(evals.tool.ProjectError): evals.prepare('natural-cli', self.dest)

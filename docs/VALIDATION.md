@@ -2,7 +2,7 @@
 
 ## Local checks — 2026-09-29
 
-**57 deterministic tests passed, zero skipped**, on Python 3.13.5 / Linux x86_64. The run exercised package integrity/metadata, preservation of user configuration, install/idempotence/upgrade, uninstall/restore, injected rename-failure recovery, conflict/symlink rejection, deterministic archive/extraction, CLI scope handling, repository consistency, and fixture-checker positive and negative controls.
+**58 deterministic tests passed, zero skipped**, on Python 3.13.5 / Linux x86_64. The run exercised package integrity/metadata, preservation of user configuration, install/idempotence/upgrade, uninstall/restore, injected rename-failure recovery, conflict/symlink rejection, deterministic archive/extraction, CLI scope handling, repository consistency, and fixture-checker positive and negative controls.
 
 Executed commands:
 
@@ -37,4 +37,6 @@ No model/API cost, speedup, quality improvement over a baseline, or general proj
 
 ## Remote CI
 
-The workflow defines Python 3.10 and 3.13 on Linux, plus Python 3.13 on macOS and Windows, with read-only repository permissions and pinned GitHub action revisions. Remote results belong to the exact PR commit and are not inferred from the local test run. At preparation of this record, remote execution is pending; inspect the PR's checks for its current status.
+The workflow defines Python 3.10 and 3.13 on Linux, plus Python 3.13 on macOS and Windows, with read-only repository permissions and pinned GitHub action revisions. Remote results belong to the exact PR commit and are not inferred from the local test run. The current result is recorded in [PR #1 checks](https://github.com/bohselecta/OAI-Project-Skill/pull/1/checks), not inferred or cached in this file.
+
+The initial run at `6456e8b4cbd585379f499410fa98675aaca5319b` passed Linux and macOS but exposed one Windows test-fixture defect: the fixture explicitly wrote CRLF through a text stream, which Windows translated again. The correction emits explicit bytes and adds a negative control that rejects malformed double-CRLF. No production-output assertion was relaxed. The CI actions were also moved from deprecated runtime versions to verified, SHA-pinned checkout v7.0.1 and setup-python v7.0.0. See the succeeding commit and its complete matrix for verification.
