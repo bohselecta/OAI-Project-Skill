@@ -37,6 +37,17 @@ see this branch/PR's exact head checks. Earlier PR #1 success is not evidence fo
 CI now runs the existing Python suite, package validator/packager and the 40 connector tests
 on Linux (Python 3.10/3.13), macOS and Windows with Node 22. The PR records actual final outcomes.
 
+## CI findings retained
+
+The first complete CI run (36620167653, head b45514267e42ca019ef3887aa2cce5c82bb47f1d)
+validated the sealed package on all four runners but exposed an obsolete test asserting the
+old nine-file inventory. The package now intentionally has thirteen sealed files. Replaced
+that count with an exact thirteen-path set while retaining complete file/hash equality and
+all drift/missing/extra-file negative controls. No production validation was relaxed.
+The Node positive temp-directory fixture also resolves macOS's /var alias, matching the
+existing Python fixture; explicit linked-workspace rejection remains tested and unchanged.
+Final full-suite outcomes are recorded on the PR for the repaired head.
+
 ## Not claimed
 
 Existing SayFrame code inspected or modified: **NOT_RUN** (repository not located).

@@ -55,7 +55,14 @@ class ToolTests(unittest.TestCase):
     def test_every_package_file_is_covered(self):
         manifest = tool.load_json(self.package / tool.MANIFEST)
         self.assertEqual(manifest['files'], tool.files_in(self.package))
-        self.assertEqual(len(manifest['files']), 9)
+        # Verify the exact reviewed inventory, not the pre-connector count of nine.
+        self.assertEqual(set(manifest['files']), {
+            'LICENSE', 'SKILL.md', 'agents/openai.yaml', 'assets/evidence.example.json',
+            'references/acceptance.md', 'references/cadence.md',
+            'references/model-policy.json', 'references/records.md',
+            'references/recovery.md', 'references/sayframe.md',
+            'scripts/sayframe.mjs', 'scripts/sayframe.d.mts', 'scripts/sayframe-cli.mjs',
+        })
 
     def test_drift_refused_without_resealing(self):
         (self.package / 'SKILL.md').write_text('broken', encoding='utf-8')

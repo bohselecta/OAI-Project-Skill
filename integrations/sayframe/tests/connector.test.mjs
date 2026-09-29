@@ -19,7 +19,9 @@ async function approve(bundle) {
     currentSnapshotDigest: bundle.envelope.snapshotDigest, approvedAt: '2026-09-29T12:02:00.000Z' });
 }
 async function disk(t, bundle = null) {
-  const dir = await fs.mkdtemp(path.join(os.tmpdir(), 'sayframe-test-'));
+  // macOS exposes its temp directory through /var; resolve the positive fixture.
+  // Explicit linked-workspace negative tests below must still be rejected.
+  const dir = await fs.realpath(await fs.mkdtemp(path.join(os.tmpdir(), 'sayframe-test-')));
   t.after(() => fs.rm(dir, { recursive: true, force: true }));
   const source = path.join(dir, 'bundle'); const workspace = path.join(dir, 'workspace');
   await fs.mkdir(source); await fs.mkdir(workspace);
