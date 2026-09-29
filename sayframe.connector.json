@@ -1,0 +1,14 @@
+{
+  "id": "sayframe-project",
+  "version": "1.0.0",
+  "protocol": "sayframe.project/1",
+  "repository": "https://github.com/bohselecta/OAI-Project-Skill",
+  "entry": "integrations/sayframe/ANTIGRAVITY.md",
+  "authoring": "integrations/sayframe/AUTHORING.md",
+  "sdk": "skills/project/scripts/sayframe.mjs",
+  "types": "skills/project/scripts/sayframe.d.mts",
+  "intake": "skills/project/references/sayframe.md",
+  "cli": "skills/project/scripts/sayframe-cli.mjs",
+  "tests": "integrations/sayframe/tests",
+  "authoringSha256": "2453cbb3f7c02f5ce0a9b54fa2b55cda736c9ef2879c0105739816b1e128a23f"
+}

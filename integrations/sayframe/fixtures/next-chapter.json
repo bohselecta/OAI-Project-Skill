@@ -1,0 +1,192 @@
+{
+  "snapshot": {
+    "projectId": "next-chapter-test",
+    "title": "Next Chapter — authored connector test fixture",
+    "revisionId": "r4",
+    "acceptedAt": "2026-09-29T12:00:00.000Z",
+    "sections": {
+      "purpose": "### Outcome\nHelp an existing small book club choose its next book with less coordination and less social pressure. Success in the prototype means a person can create a poll, submit a fictional vote, close voting, and read the correct aggregate result without sending a group message.\n\n### Scope\nThis is a private local prototype with fictional data, not a public voting service. Do not publish individual voting histories. Discussion feeds, accounts, invitations, payments, and real member contact are excluded.",
+      "design": "### Journeys\nAn organizer creates a poll with two to six distinct book titles. A fictional member chooses one title, reviews it, and submits. The organizer closes the poll; aggregate totals and ties are then visible. A poll without votes displays an honest empty result, not a winner.\n\n### Presentation\nUse a calm editorial book-club identity: warm paper, dark readable text, book titles as the visual hierarchy, and one restrained accent. Inspect desktop and phone layouts, keyboard focus, readable status text, and reduced motion. Do not turn the prototype into a social network.\n\n### States and recovery\nPolls move from draft to open to closed. Closed polls reject new votes. Invalid choices explain the error and preserve the selection. Reload preserves committed state. Failed storage displays an error and leaves the prior durable state intact. The interface never claims that a failed save succeeded.",
+      "approach": "### Components and responsibilities\nA presentation layer collects intent and renders current state. A small poll domain owns transitions and tally rules. A local persistence boundary commits complete changes. These are logical responsibilities, not a required framework or a microservice design.\n\n### Data and retained state\nA poll has an identifier, titles, status, and fictional ballots keyed by a synthetic voter identifier. Keep named-ballot information out of the visible aggregate view. Store only fictional identifiers. Reload restores committed polls; no cloud sync or cross-device promise is made.\n\n### Interfaces and side effects\nThe presentation layer requests create, open, vote, close, and read-result operations from the domain. Persistence returns committed state or a recoverable error. No operation contacts a member or an external service. The author may choose a simple implementation stack, but it cannot add an account requirement or external write.\n\n### Invariants\nI-01: Only open polls accept votes. I-02: One synthetic voter has at most one committed vote per poll. I-03: Individual voting histories are never rendered. I-04: Failed persistence never produces a saved-success message. I-05: The result counts only committed ballots.\n\n### Acceptance\nA-01 tests open versus closed voting and supports I-01. A-02 retries and double-submits the same synthetic vote and supports I-02. A-03 inspects actual desktop/mobile rendered views and supports I-03. A-04 injects a persistence failure and reloads to test I-04. A-05 checks counts, ties, and empty polls and supports I-05. Tests, inspected browser behavior, and any unrun checks are reported separately; no participant study is claimed.\n\n### Delivery and authority\nDeliver a working local prototype and reproducible run instructions in the user's selected product workspace. Local implementation and disposable tests are allowed. Do not purchase services, deploy, push, contact members, or change production. The Project Skill repository is a tool source, not the output destination.\n\n### Assumptions and unresolved questions\nSynthetic voter IDs are a deliberate prototype assumption. Real duplicate-vote prevention, minimum identity, member consent, and public release remain unresolved and outside this action. A limited prototype can proceed without pretending those questions are solved. Stop if implementation requires real personal data or an external service."
+    }
+  },
+  "connector": {
+    "repository": "https://github.com/bohselecta/OAI-Project-Skill",
+    "commit": "0000000000000000000000000000000000000000",
+    "version": "1.0.0"
+  },
+  "target": {
+    "workspace": "next-chapter-local-test",
+    "repository": null,
+    "baseCommit": null
+  },
+  "scope": {
+    "action": "Create the private local prototype with fictional data.",
+    "permitted": [
+      "Local source edits, ordinary dependency setup, disposable tests, browser inspection and documentation."
+    ],
+    "prohibited": [
+      "Purchases, public disclosure, remote pushes, deployment, member contact and production changes."
+    ],
+    "spending": "No API or paid-service spending is authorized.",
+    "externalActions": "No external writes, publication, or outreach is authorized.",
+    "stopConditions": [
+      "Stop before requiring real member data, a paid provider, external writes, or a change to the privacy invariants."
+    ]
+  },
+  "review": {
+    "method": "manual",
+    "reviewer": "Authored deterministic fixture, NOT an actual human or model review",
+    "reviewedAt": "2026-09-29T12:01:00.000Z",
+    "coverage": [
+      {
+        "topic": "outcome",
+        "state": "covered",
+        "rationale": "Fixture covers this topic in accepted test prose; this is not a live semantic evaluation.",
+        "refs": [
+          {
+            "section": "purpose",
+            "quote": "Help an existing small book club choose its next book with less coordination and less social pressure."
+          }
+        ]
+      },
+      {
+        "topic": "scope",
+        "state": "covered",
+        "rationale": "Fixture covers this topic in accepted test prose; this is not a live semantic evaluation.",
+        "refs": [
+          {
+            "section": "purpose",
+            "quote": "This is a private local prototype with fictional data, not a public voting service."
+          }
+        ]
+      },
+      {
+        "topic": "journeys",
+        "state": "covered",
+        "rationale": "Fixture covers this topic in accepted test prose; this is not a live semantic evaluation.",
+        "refs": [
+          {
+            "section": "design",
+            "quote": "An organizer creates a poll with two to six distinct book titles."
+          }
+        ]
+      },
+      {
+        "topic": "presentation",
+        "state": "covered",
+        "rationale": "Fixture covers this topic in accepted test prose; this is not a live semantic evaluation.",
+        "refs": [
+          {
+            "section": "design",
+            "quote": "Use a calm editorial book-club identity: warm paper, dark readable text, book titles as the visual hierarchy, and one restrained accent."
+          }
+        ]
+      },
+      {
+        "topic": "states",
+        "state": "covered",
+        "rationale": "Fixture covers this topic in accepted test prose; this is not a live semantic evaluation.",
+        "refs": [
+          {
+            "section": "design",
+            "quote": "Polls move from draft to open to closed."
+          }
+        ]
+      },
+      {
+        "topic": "components",
+        "state": "covered",
+        "rationale": "Fixture covers this topic in accepted test prose; this is not a live semantic evaluation.",
+        "refs": [
+          {
+            "section": "approach",
+            "quote": "A small poll domain owns transitions and tally rules."
+          }
+        ]
+      },
+      {
+        "topic": "data",
+        "state": "covered",
+        "rationale": "Fixture covers this topic in accepted test prose; this is not a live semantic evaluation.",
+        "refs": [
+          {
+            "section": "approach",
+            "quote": "A poll has an identifier, titles, status, and fictional ballots keyed by a synthetic voter identifier."
+          }
+        ]
+      },
+      {
+        "topic": "interfaces",
+        "state": "covered",
+        "rationale": "Fixture covers this topic in accepted test prose; this is not a live semantic evaluation.",
+        "refs": [
+          {
+            "section": "approach",
+            "quote": "The presentation layer requests create, open, vote, close, and read-result operations from the domain."
+          }
+        ]
+      },
+      {
+        "topic": "invariants",
+        "state": "covered",
+        "rationale": "Fixture covers this topic in accepted test prose; this is not a live semantic evaluation.",
+        "refs": [
+          {
+            "section": "approach",
+            "quote": "I-01: Only open polls accept votes."
+          }
+        ]
+      },
+      {
+        "topic": "acceptance",
+        "state": "covered",
+        "rationale": "Fixture covers this topic in accepted test prose; this is not a live semantic evaluation.",
+        "refs": [
+          {
+            "section": "approach",
+            "quote": "A-01 tests open versus closed voting and supports I-01."
+          }
+        ]
+      },
+      {
+        "topic": "delivery",
+        "state": "covered",
+        "rationale": "Fixture covers this topic in accepted test prose; this is not a live semantic evaluation.",
+        "refs": [
+          {
+            "section": "approach",
+            "quote": "Deliver a working local prototype and reproducible run instructions in the user's selected product workspace."
+          }
+        ]
+      },
+      {
+        "topic": "risks",
+        "state": "covered",
+        "rationale": "Fixture covers this topic in accepted test prose; this is not a live semantic evaluation.",
+        "refs": [
+          {
+            "section": "approach",
+            "quote": "Real duplicate-vote prevention, minimum identity, member consent, and public release remain unresolved and outside this action."
+          }
+        ]
+      }
+    ],
+    "findings": [
+      {
+        "id": "U-01",
+        "kind": "unknown",
+        "blocking": false,
+        "state": "open",
+        "summary": "Real-member identity is unresolved but explicitly outside the local fictional-data prototype.",
+        "refs": [
+          {
+            "section": "approach",
+            "quote": "Synthetic voter IDs are a deliberate prototype assumption."
+          }
+        ]
+      }
+    ],
+    "subjectDigest": "b67bc741e37634004b0e9f2aefd6ef9943103f1dbc4792e24062be662b9e591b"
+  }
+}

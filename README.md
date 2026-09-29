@@ -25,7 +25,7 @@ The workflow scales down for small changes. It preserves existing systems and us
 
 Use a Codex/skill-capable client with filesystem and execution access for software construction. Model availability, tools, and approval controls depend on the host and account. A local skill does not automatically install into ChatGPT web.
 
-The optional installer, validator, and fixture runner require **Python 3.10+**, with no third-party packages. The skill itself is Markdown and JSON/YAML; it needs no daemon, MCP server, API key, hooks, or runtime dependency of its own. On Windows use `python` where `python3` is unavailable. Use a real, non-symlinked checkout/destination with this installer.
+The optional installer, validator, and fixture runner require **Python 3.10+**, with no third-party packages. The core skill is Markdown and JSON/YAML; it needs no daemon, MCP server, API key, hooks, or runtime dependency of its own. On Windows use `python` where `python3` is unavailable. Use a real, non-symlinked checkout/destination with this installer.
 
 ## Install once
 
@@ -72,6 +72,23 @@ For substantial work, the usual records are:
 ```
 
 Small changes do not require this full file set. A model-switch request is concise, names a supported choice, and points at a checkpoint. `proceed` resumes that work; it never grants new spending, disclosure, or production permissions. Credential setup, genuinely consequential choices, and host approvals remain possible exceptions to the otherwise hands-off workflow.
+
+## SayFrame front end
+
+**Develop the complete proposal in SayFrame; build the accepted revision with Project.**
+The [SayFrame connector](integrations/sayframe/README.md) preserves Purpose / Design / Approach,
+including functional architecture, invariants, acceptance and explicit execution limits. It
+exports exact accepted language rather than a transcript or shortened implementation prompt.
+
+Discovery: [sayframe.connector.json](sayframe.connector.json). Existing-app implementation:
+[Antigravity directive](integrations/sayframe/ANTIGRAVITY.md). Installed consumer:
+[SayFrame intake](skills/project/references/sayframe.md). Actual evidence and remaining host
+checks: [connector status](integrations/sayframe/STATUS.md).
+
+The optional connector SDK/CLI requires a modern browser or Node 22+, respectively; ordinary
+Project use and the Python installer remain unchanged. It does not launch Codex, grant new
+permissions or upload project content. Use the reviewed `codex/sayframe-connector` commit while
+this integration and its base candidate remain in review; do not assume it is already on main.
 
 ## Updates, recovery, and extension
 

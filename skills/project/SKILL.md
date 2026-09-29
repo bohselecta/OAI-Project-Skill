@@ -28,6 +28,8 @@ For a small bounded change, reuse existing requirements and checks; a short cont
 
 Absent equivalents, use `.project/PROJECT-CONTRACT.md` and `.project/STATUS.md`; add `.project/DECISIONS.md` only for material decisions. Use [records](references/records.md) when establishing state or resuming work. Keep these records free of secrets and unnecessary personal data.
 
+When the user supplies a SayFrame handoff, load [SayFrame intake](references/sayframe.md). Verify its exact accepted revision, action, target and limits; adopt the complete supplied functional contract rather than repeating product design. A connection, draft export or digest is not permission to build.
+
 Before extensive scaffolding, test the riskiest assumption or core interaction. Keep spikes disposable. Use the result to settle the contract, then proceed to the smallest complete vertical slice. A supplied complete spec may already be the contract; map it rather than rewriting it.
 
 ## 3. Freeze the contract
