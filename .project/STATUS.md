@@ -1,3 +1,5 @@
+> 2026-09-29 native transport candidate: see [scoped evidence and release gates](../docs/HANDOFF-STATUS.md). Historical validation below is not verification of the new plugin or transport.
+
 # Project skill release status
 Contract revision: 1
 Upstream baseline: 89141afdf32036b49240c1937f017c15d55fdf04

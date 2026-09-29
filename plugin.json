@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "project",
-  "version": "1.0.0",
-  "description": "Turn natural-language goals or specifications into verified software with contract freeze and adaptive model cadence.",
+  "version": "1.1.0",
+  "description": "Prepare a verified SayFrame handoff, then build with the canonical Project skill after the user says Proceed.",
   "author": {
     "name": "Hayden Lindley"
   },
@@ -13,6 +13,23 @@
     "skills",
     "software-development",
     "project",
-    "verification"
-  ]
+    "verification",
+    "sayframe"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "OAI Project",
+        "shortDescription": "Clear intent. Verified handoff. Human-controlled build.",
+        "developerName": "Hayden Lindley",
+        "category": "Productivity",
+        "capabilities": [
+          "Read"
+        ],
+        "defaultPrompt": [
+          "Load my SayFrame handoff, verify it, and wait for Proceed."
+        ]
+      }
+    }
+  }
 }

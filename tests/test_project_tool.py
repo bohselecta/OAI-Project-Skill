@@ -62,6 +62,9 @@ class ToolTests(unittest.TestCase):
             'references/model-policy.json', 'references/records.md',
             'references/recovery.md', 'references/sayframe.md',
             'scripts/sayframe.mjs', 'scripts/sayframe.d.mts', 'scripts/sayframe-cli.mjs',
+            'references/sayframe-transport.md', 'scripts/private-fs.mjs',
+            'scripts/sayframe-fetch.mjs', 'scripts/sayframe-mcp.mjs', 'scripts/sayframe-remote.mjs',
+            'scripts/transport.mjs', 'scripts/transport.d.mts',
         })
 
     def test_drift_refused_without_resealing(self):

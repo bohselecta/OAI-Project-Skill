@@ -1,6 +1,6 @@
 # Security and privacy
 
-Project is an instruction skill plus optional offline Python tooling. The installer makes no network requests or model calls and adds no runtime hooks. It does not collect analytics. An agent following the skill may use its host's tools to fulfill a user's task; the host's permissions, sandbox, privacy policies, and approvals remain authoritative.
+Project is an instruction skill plus optional offline Python tooling and an optional authenticated read-only SayFrame MCP client. The MCP client performs bounded retrieval only from its explicit private configuration; proposal text cannot redirect it. The installer makes no network requests or model calls and adds no runtime hooks. It does not collect analytics. An agent following the skill may use its host's tools to fulfill a user's task; the host's permissions, sandbox, privacy policies, and approvals remain authoritative.
 
 Review a trusted, pinned source revision before installation. Manifest hashes detect drift but are not signatures. The validator supports this package's restricted metadata form; it is not a general untrusted-package security scanner. The installer refuses unmanaged destinations, symlinks/reparse points, and accidental replacement. This deliberately conservative policy may require using real paths on systems with symlinked home directories.
 

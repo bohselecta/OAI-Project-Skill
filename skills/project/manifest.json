@@ -1,7 +1,7 @@
 {
   "files": {
     "LICENSE": "ff264200b057c26c27ac731e715f60e9fec5ecf3fdea549e9622a4d55127c640",
-    "SKILL.md": "1da2687dbceff9ac781e7ecd8ba6f251964d1d9a82671bcc48d5cae75babff8a",
+    "SKILL.md": "42244266a74cf43e67cefe5bb81f93c21c1bb1219c700ae3251bbb27ea088f9c",
     "agents/openai.yaml": "51da7f2fee7dce5b9f310ecb548db4c610d30902415e178047f6520cc098eabb",
     "assets/evidence.example.json": "9d830feb4ede9bcc031954b22aa800ee903b51f435129100ce3f78a9844031c2",
     "references/acceptance.md": "77c62516f1161142e792ebf75be04d029a9c3c5c190ab9648bda3fe05b7b4071",
@@ -9,12 +9,19 @@
     "references/model-policy.json": "ac8b6c644ebfa329178d8defc54c6ebd479033982a3c21740a931fc31faeb713",
     "references/records.md": "62a17120d0afaeea9fda061a049c5216bc2b85e5e7b17f66ea09db665138a4f4",
     "references/recovery.md": "34b2476cec48ad67d13d4ca8e7dbde72b3bd9749352b13ebf23c1464e7d64b9b",
-    "references/sayframe.md": "67330241a8ac31c9fc90924d70aa0884b530aeb987de2ae11dab26f3bcdf5eb2",
+    "references/sayframe-transport.md": "3b82841c2055b98a932aa761138bed44607f366298a92d21fa3401df51c74a9e",
+    "references/sayframe.md": "0bb793f816e5bdf24743cc24d15d1e5e080e6b77c50228758f53963bc786156b",
+    "scripts/private-fs.mjs": "90ec6d1eb9b3e62c4a35974b5315443d8f4b03e10ac753bde0c52e356647998a",
     "scripts/sayframe-cli.mjs": "5e424c96fc8753cea51e769bfc47eb667e17fd8d2fe77a421f758f7056a202d2",
+    "scripts/sayframe-fetch.mjs": "8ff6f813648a91751620b8792e5b0da94f7ece8b6aa56b3258bb60dd531ee3a5",
+    "scripts/sayframe-mcp.mjs": "0b47afa7b6ec18c582bffa798fb40e0daeaeed9f87c567331961a6cd8dd1befb",
+    "scripts/sayframe-remote.mjs": "d6073aa5b7c4e3488b71f398d5c9b00662099d01b61f20e37a1a33b8af414b20",
     "scripts/sayframe.d.mts": "8a2a55642183f15ced0347255434772cec080e71c613303b2f00d6d9715cbf2f",
-    "scripts/sayframe.mjs": "a4096b8a4fba843f3197e92d627271644143e3235cb53b186de6a3362a913055"
+    "scripts/sayframe.mjs": "a4096b8a4fba843f3197e92d627271644143e3235cb53b186de6a3362a913055",
+    "scripts/transport.d.mts": "50e714d1a99f65bfab5900ae1ed25530d51eff4aa604427c9d8ee72ba7c78979",
+    "scripts/transport.mjs": "92db3890f9eb28d73b0fc06434773afa415eb0977bea28dc914debc17d6650d3"
   },
   "format_version": 1,
   "package": "project",
-  "version": "1.0.0"
+  "version": "1.1.0"
 }

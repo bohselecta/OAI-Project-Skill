@@ -2,13 +2,13 @@
 
 ## What exists
 
-`skills/project/` is the canonical standalone skill. The optional root `plugin.json` follows the portable Agent Plugins layout described by [OpenAI](https://developers.openai.com/plugins/build/plugins), discovering that same `skills/` tree. There are no MCP connections, auth credentials, hook executables, or paid services in this plugin.
+`skills/project/` is the canonical standalone skill. The optional root `plugin.json` follows the portable Agent Plugins layout described by [OpenAI](https://developers.openai.com/plugins/build/plugins), discovering that same `skills/` tree. The optional native intake adds an explicitly configured, read-only local MCP connection. Credentials remain in a private external configuration file; no hooks, provider purchases or automatic global installation are added. See [native setup](NATIVE-SAYFRAME.md).
 
 The tested Python installer supports user and repository skill locations. Its output does not establish plugin import or native skill discovery. Avoid installing both a standalone and a plugin copy in the same host unless you deliberately manage duplicate names.
 
 ## Native plugin testing
 
-In a compatible current ChatGPT Work/Codex authoring environment, ask the available plugin-creator workflow to use this existing repository root as a **skills-only plugin**, preserve its portable manifest, and register a local test source. Verify the supported client's current discovery/import path before writing a marketplace configuration. Do not add empty MCP servers, invented IDs, unnecessary hooks, or a hosted backend.
+In a compatible current ChatGPT Work/Codex authoring environment, ask the available plugin-creator workflow to use this existing repository root as the **Project plugin with optional read-only SayFrame intake**, preserve its portable manifest, and register a local test source. Verify the supported client's current discovery/import path before writing a marketplace configuration. Use the checked-in local marketplace identity and populated read-only MCP entry. Do not add empty servers, invented public listing IDs, unnecessary hooks or an unapproved hosted backend.
 
 Test in a new session: select the installed Project skill explicitly, then separately test natural-language matching. Exercise the fixture suite and manual scenarios. Record client/model versions and how installation was performed. Local imports and account-managed plugin policies differ; a local filesystem copy does not install into unrelated web sessions.
 

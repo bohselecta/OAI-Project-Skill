@@ -1,3 +1,5 @@
+> Optional native SayFrame handoff/plugin candidate: [installation and operating limits](docs/NATIVE-SAYFRAME.md). This is not a published directory listing; native-host acceptance remains NOT_RUN. The standalone Project workflow stays available.
+
 # Project
 ### Say what to build. Let the agent own the development loop.
 
@@ -110,7 +112,7 @@ To make a deterministic standalone skill archive:
 python3 scripts/project_tool.py pack --out dist/project-skill-1.0.0.zip
 ```
 
-The root [plugin.json](plugin.json) also packages the **same** `skills/project` directory using OpenAI's documented portable plugin layout. No duplicated skill, MCP server, or lifecycle hook is introduced. Local skill installation, native plugin import, and public-directory publication are separate operations. See [distribution](docs/DISTRIBUTION.md); no directory submission or installation into your ChatGPT account is performed by this repository.
+The root [plugin.json](plugin.json) also packages the **same** `skills/project` directory using OpenAI's documented portable plugin layout. The canonical construction skill is not duplicated. Optional read-only MCP intake and a separate intake skill are provided; no lifecycle hook is introduced. Local skill installation, native plugin import, and public-directory publication are separate operations. See [distribution](docs/DISTRIBUTION.md); no directory submission or installation into your ChatGPT account is performed by this repository.
 
 ## License, contribution, and support
 

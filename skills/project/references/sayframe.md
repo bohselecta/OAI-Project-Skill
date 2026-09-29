@@ -3,6 +3,15 @@
 Load this only when the user explicitly supplies a SayFrame handoff for review/build.
 A mention of SayFrame, a repository connection or an imported file is not a build request.
 
+## Native Codex launch
+
+For a `codex://` launch with a transport ID and expected intent digest, first use
+[read-only native intake](sayframe-transport.md) and the sibling `sayframe-intake`
+skill. Fetch and verify the complete frozen packet, inspect the selected product
+workspace without changes, and wait for the user to choose a model and say Proceed.
+A plugin install, launch link, retrieval or old approval field cannot start a build.
+After Proceed, stage and validate the exact three files and continue below.
+
 ## Intake
 
 1. Establish the user's current request, target workspace, branch, dirty work, inherited
@@ -42,7 +51,7 @@ supersede it, with provenance. A new SayFrame revision is a new handoff, not a l
 
 Proceed with Project's existing cadence, vertical slices, error recovery and acceptance loop.
 No special model switch is required by this connector. Use current actual host capabilities.
-No telemetry, remote invocation, network service, MCP server or paid dependency is introduced.
+The original file-based path introduces no telemetry, remote invocation, network service, MCP server or paid dependency. The optional native transport adds only explicitly configured authenticated read-only retrieval; it does not execute work or synchronize approvals.
 
 ## Return to SayFrame
 

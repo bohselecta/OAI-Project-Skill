@@ -27,3 +27,12 @@ A-5: Negative-path tests cover conflicting/unmanaged installs, symlinks, corrupt
 A-6: Runnable host evaluation fixtures and a rubric distinguish actual model trials from tooling tests.
 A-7: Product README, license, attribution, contribution/security guidance, CI, and exact validation evidence.
 A-8: Publish source to a reviewable GitHub branch and PR; preserve default branch and visibility. Report remote checks honestly.
+
+## Dated extension — 2026-09-29 native SayFrame handoff
+The latest user request authorizes changes in both independent repositories and eventual
+main-branch delivery after verification. It supersedes the earlier branch-only delivery
+boundary, not permission safeguards. Add an OPTIONAL plugin/read-only authenticated MCP
+transport and compact desktop launcher. Keep the standalone file-based skill, the frozen
+contract, human model selection and Proceed gate. Do not add provider charges, public
+listing, repository visibility changes, global installation or production deployment by
+inference. Source changes are a candidate until full repository and native-host checks pass.

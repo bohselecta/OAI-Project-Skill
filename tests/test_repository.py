@@ -16,10 +16,20 @@ class RepositoryTests(unittest.TestCase):
         self.assertEqual(plugin['version'], (ROOT / 'VERSION').read_text().strip())
         self.assertEqual(plugin['$schema'], 'https://agent-plugins.org/schemas/1.0.0/plugin.schema.json')
         self.assertEqual(plugin['license'], 'MIT')
-    def test_no_implicit_runtime_hooks_or_servers(self):
-        for path in ('mcp.json', '.mcp.json', 'hooks', '.codex/config.toml'):
+    def test_explicit_read_only_transport_without_implicit_hooks(self):
+        for path in ('.mcp.json', 'hooks', '.codex/config.toml'):
             self.assertFalse((ROOT / path).exists(), path)
-        self.assertEqual([p.name for p in (ROOT / 'skills').iterdir() if p.is_dir()], ['project'])
+        self.assertEqual(sorted(p.name for p in (ROOT / 'skills').iterdir() if p.is_dir()), ['project', 'sayframe-intake'])
+        config = json.loads((ROOT / 'mcp.json').read_text(encoding='utf-8'))
+        self.assertEqual(config, {'$schema':'https://agent-plugins.org/schemas/1.0.0/mcp.schema.json', 'mcpServers': {'sayframe': {
+            'type':'stdio', 'command': 'node', 'args': ['skills/project/scripts/sayframe-mcp.mjs'], 'cwd': '${PLUGIN_ROOT}'}}})
+        self.assertNotIn('env', config['mcpServers']['sayframe'])
+        intake = (ROOT / 'skills/sayframe-intake/SKILL.md').read_text(encoding='utf-8')
+        self.assertIn('Proceed', intake)
+        self.assertIn('Do not clone', intake)
+        marketplace = json.loads((ROOT / '.agents/plugins/marketplace.json').read_text(encoding='utf-8'))
+        self.assertEqual(marketplace['plugins'][0]['name'], 'project')
+        self.assertEqual(marketplace['plugins'][0]['source'], {'source':'local', 'path':'./'})
     def test_license_in_standalone_package(self):
         self.assertEqual((ROOT / 'LICENSE').read_bytes(), (ROOT / 'skills/project/LICENSE').read_bytes())
     def test_document_links_resolve_locally(self):
