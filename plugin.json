@@ -1,0 +1,18 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "project",
+  "version": "1.0.0",
+  "description": "Turn natural-language goals or specifications into verified software with contract freeze and adaptive model cadence.",
+  "author": {
+    "name": "Hayden Lindley"
+  },
+  "repository": "https://github.com/bohselecta/OAI-Project-Skill",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "skills",
+    "software-development",
+    "project",
+    "verification"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "policy_version": "2026-09-29.1",
+  "verified_on": "2026-09-29",
+  "review_after": "2026-10-29",
+  "status": "documented-not-host-evaluated",
+  "purpose": "Advisory mapping of stable Project roles to documented OpenAI models; not host configuration or guaranteed account availability.",
+  "sources": [
+    {
+      "id": "codex-models",
+      "url": "https://developers.openai.com/codex/models/",
+      "kind": "official-product-documentation"
+    },
+    {
+      "id": "astra-card",
+      "url": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+      "kind": "official-model-reference"
+    },
+    {
+      "id": "sol-card",
+      "url": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+      "kind": "official-model-reference"
+    },
+    {
+      "id": "luna-card",
+      "url": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+      "kind": "official-model-reference"
+    }
+  ],
+  "roles": {
+    "reasoner": {
+      "candidate_id": "gpt-6-astra",
+      "documented_position": "Most capable model for demanding work.",
+      "suggested_use": "Unresolved intent, consequential architecture, difficult debugging and acceptance.",
+      "effort_policy": "Use client-supported effort appropriate to risk; increase when evidence requires deeper analysis.",
+      "sources": [
+        "codex-models",
+        "astra-card"
+      ],
+      "workflow_evaluation": "NOT_RUN"
+    },
+    "builder": {
+      "candidate_id": "gpt-6.1-sol",
+      "documented_position": "Recommended for complex coding and agentic workflows when available.",
+      "suggested_use": "Sustained implementation of a coherent contract.",
+      "effort_policy": "Begin with a suitable available default; increase for difficult implementation.",
+      "sources": [
+        "codex-models",
+        "sol-card"
+      ],
+      "workflow_evaluation": "NOT_RUN"
+    },
+    "mechanical": {
+      "candidate_id": "gpt-6-luna",
+      "documented_position": "Efficient model for focused, high-volume work.",
+      "suggested_use": "Optional batches of bounded transformations with strong checks.",
+      "effort_policy": "Use supported controls; do not downshift when interruption or integration risk outweighs savings.",
+      "sources": [
+        "codex-models",
+        "luna-card"
+      ],
+      "workflow_evaluation": "NOT_RUN"
+    }
+  },
+  "fallback": "Retain the current sufficiently capable model. Check host availability before suggesting a successor. Do not invent aliases, effort enums, prices or access.",
+  "constraints": [
+    "No automatic model calls or global config mutation.",
+    "No automatic policy update during a build.",
+    "No claim that model-card positioning validates this workflow.",
+    "No assumption that cache is reusable across models."
+  ]
+}

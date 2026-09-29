@@ -1,0 +1,6 @@
+interface:
+  display_name: "Project"
+  short_description: "From intent to verified software, end to end"
+  default_prompt: "Use $project to build the software described in my request or supplied specification through evidence-backed acceptance."
+policy:
+  allow_implicit_invocation: true

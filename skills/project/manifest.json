@@ -1,0 +1,16 @@
+{
+  "files": {
+    "LICENSE": "ff264200b057c26c27ac731e715f60e9fec5ecf3fdea549e9622a4d55127c640",
+    "SKILL.md": "e486c88a48e3748ff3cc8cd3b6008a1495ecbb2f73a77006f2914e59ff3e0a1d",
+    "agents/openai.yaml": "51da7f2fee7dce5b9f310ecb548db4c610d30902415e178047f6520cc098eabb",
+    "assets/evidence.example.json": "9d830feb4ede9bcc031954b22aa800ee903b51f435129100ce3f78a9844031c2",
+    "references/acceptance.md": "77c62516f1161142e792ebf75be04d029a9c3c5c190ab9648bda3fe05b7b4071",
+    "references/cadence.md": "c4dd2ad0ca5c2eafeccc140c087ec50f5cff4a01d60796359ff1966db2b1fb04",
+    "references/model-policy.json": "ac8b6c644ebfa329178d8defc54c6ebd479033982a3c21740a931fc31faeb713",
+    "references/records.md": "62a17120d0afaeea9fda061a049c5216bc2b85e5e7b17f66ea09db665138a4f4",
+    "references/recovery.md": "34b2476cec48ad67d13d4ca8e7dbde72b3bd9749352b13ebf23c1464e7d64b9b"
+  },
+  "format_version": 1,
+  "package": "project",
+  "version": "1.0.0"
+}

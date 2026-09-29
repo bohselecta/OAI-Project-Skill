@@ -1,0 +1,25 @@
+{
+  "example_only": true,
+  "run_id": null,
+  "source_revision": null,
+  "skill_manifest_sha256": null,
+  "client_version": null,
+  "model_runtime_id": null,
+  "model_user_reported": null,
+  "reasoning_setting": null,
+  "case": null,
+  "selection": "NOT_RECORDED",
+  "checks": [],
+  "human_interventions": [],
+  "usage": {
+    "input": null,
+    "cached_input": null,
+    "cache_write": null,
+    "output": null,
+    "reasoning": null,
+    "reasoning_included_in_output": null
+  },
+  "wall_seconds": null,
+  "evidence_paths": [],
+  "outcome": "NOT_RUN"
+}
