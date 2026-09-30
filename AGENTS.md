@@ -10,3 +10,5 @@ This repository builds the Project skill; it is not a user's application workspa
 - Preserve safe installation, scope proportionality, source attribution, explicit authority, and truthful acceptance.
 - Do not install globally, run model-backed evaluations, change visibility, publish a release, or submit a marketplace listing merely because tests pass. Follow the user's actual authorization.
 - No network or paid service is required for local validation. Never weaken assertions to claim completion.
+
+- Claude Code is a generated host adapter at `.claude/skills/project`, not a second canonical workflow. See `docs/CLAUDE-CODE.md`; edit canonical sources or `adapters/claude-code/references`, then run `python3 scripts/build_claude_skill.py` and `--check`.

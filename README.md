@@ -3,7 +3,7 @@
 # Project
 ### Say what to build. Let the agent own the development loop.
 
-**Contract Freeze + Model Cadence Valve**, packaged as a reusable skill for Codex and compatible skill-enabled OpenAI environments.
+**Contract Freeze + Model Cadence Valve**, packaged as a reusable skill for Codex, compatible skill-enabled OpenAI environments, and [Claude Code](docs/CLAUDE-CODE.md).
 
 ```text
 Project: build a local-first research notebook with Markdown export.
@@ -58,6 +58,19 @@ python3 scripts/project_tool.py install --repo /absolute/path/to/your-repo
 ```
 
 Do not install both scopes unnecessarily. The installer refuses conflicting unmanaged directories and linked paths. It never edits `AGENTS.md`, `config.toml`, permissions, or user settings. `status` verifies bytes and metadata, not whether a running client has loaded the skill. See the current [OpenAI skill guide](https://developers.openai.com/codex/skills/) for host discovery and invocation; restart the client if it has not detected the new skill.
+
+## Claude Code
+
+The Claude-native package is [`.claude/skills/project`](.claude/skills/project/SKILL.md).
+Copy the whole folder to your product repository's `.claude/skills/project/`, or to
+`~/.claude/skills/project/` for personal use, then invoke **`/project build …`**.
+Follow the [Claude Code installation, cadence, and validation guide](docs/CLAUDE-CODE.md)
+to preserve existing copies and verify discovery. The Codex installer above remains unchanged.
+
+This adapter keeps the same Contract Freeze and evidence-backed delivery loop, uses
+Claude model guidance, and supports verified SayFrame file bundles. Native Codex launch
+links are not Claude launchers. Offline package tests pass; authenticated Claude host
+behavior remains **NOT_RUN**.
 
 ## Use
 

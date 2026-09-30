@@ -49,6 +49,10 @@ jobs:
           node-version: '22'
       - name: Validate sealed skill
         run: python scripts/project_tool.py validate
+      - name: Verify Claude Code distribution
+        run: python scripts/build_claude_skill.py --check
+      - name: Verify isolated Claude SayFrame adapter
+        run: node --test integrations/sayframe/tests/claude-adapter.test.mjs
       - name: Run deterministic tests (no model calls)
         run: python -m unittest discover -s tests -v
       - name: Verify SayFrame connector and local intake (no model calls)
