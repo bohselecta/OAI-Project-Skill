@@ -51,12 +51,18 @@ jobs:
         run: python scripts/project_tool.py validate
       - name: Verify Claude Code distribution
         run: python scripts/build_claude_skill.py --check
-      - name: Verify isolated Claude SayFrame adapter
-        run: node --test integrations/sayframe/tests/claude-adapter.test.mjs
       - name: Run deterministic tests (no model calls)
         run: python -m unittest discover -s tests -v
-      - name: Verify SayFrame connector and local intake (no model calls)
-        run: node --test integrations/sayframe/tests/connector.test.mjs
+      - name: Verify complete SayFrame suite (no model calls)
+        run: node --test --test-timeout=10000 integrations/sayframe/tests/connector.test.mjs integrations/sayframe/tests/claude-adapter.test.mjs integrations/sayframe/tests/native-mcp.test.mjs integrations/sayframe/tests/native-transport.test.mjs
+      - name: Create both host release bundles and checksums
+        run: python scripts/build_release.py --out-dir "${{ runner.temp }}/project-release"
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        if: matrix.os == 'ubuntu-latest' && matrix.python == '3.13'
+        with:
+          name: project-release
+          path: ${{ runner.temp }}/project-release
+          retention-days: 7
       - name: Create verified standalone distribution
         run: python scripts/project_tool.py pack --out "${{ runner.temp }}/project-skill.zip"
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a

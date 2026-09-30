@@ -1,3 +1,17 @@
+# Current release status — 2026-09-30
+
+Release: 1.2.0 public preview. Claude Code adapter merged in PR #3 at `cd6842cf75296ac462d26a32836d1d971d0eef8e`.
+Scope: public source/package preparation, MIT license preserved, both host install paths, deterministic release bundles and checksums, no marketplace submission or visibility change.
+Evidence and release gates: [current validation](../docs/VALIDATION.md), [release checklist](../docs/RELEASE.md).
+Native Codex/Claude discovery, manual model switching and model-backed behavioral trials remain NOT_RUN; no stable/native-certified claim.
+Release-readiness changes require exact-final-revision CI before delivery. No GitHub Release or tag is created by preparation alone.
+
+---
+
+# Historical release records
+
+The following records describe earlier candidates. Their branch/access status and test counts are historical, not current release evidence.
+
 > 2026-09-29 native transport candidate: see [scoped evidence and release gates](../docs/HANDOFF-STATUS.md). Historical validation below is not verification of the new plugin or transport.
 
 # Project skill release status

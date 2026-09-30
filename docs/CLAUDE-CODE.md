@@ -1,9 +1,9 @@
 # Project for Claude Code
 
 The Claude Code distribution is [`.claude/skills/project`](../.claude/skills/project/SKILL.md).
-It preserves **Contract Freeze + Model Cadence Valve** from canonical Project 1.1.0,
+It preserves **Contract Freeze + Model Cadence Valve** from canonical Project 1.2.0,
 with Claude-specific invocation, model guidance, and file-based SayFrame intake.
-The existing OpenAI package, installer, archive, plugin and native transport are unchanged.
+The OpenAI workflow, installer and native transport are preserved; both host packages share the release version.
 
 ## Installation
 

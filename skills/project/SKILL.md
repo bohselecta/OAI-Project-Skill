@@ -3,7 +3,7 @@ name: project
 description: "Build software end-to-end from natural language or a specification. Use for an intentional Project: build/finish/implement request or explicit $project invocation. Do not activate for explanation, brainstorming, review-only, or quoted examples of the trigger."
 license: MIT
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
 ---
 
 # Project

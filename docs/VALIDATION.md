@@ -1,6 +1,29 @@
 # Validation evidence
 
-## Local checks — 2026-09-29
+## Current public preview — 1.2.0, 2026-09-30
+
+The release-readiness suite covers both host distributions, integrity, reversible Codex
+installation, portable Claude copies, drift rejection, deterministic release ZIPs/checksums,
+and exact public metadata. Run the complete [release checks](RELEASE.md) against your pinned
+revision. CI runs on Linux, macOS and Windows; use the exact commit's checks in
+[GitHub Actions](https://github.com/bohselecta/OAI-Project-Skill/actions), not historical hashes below.
+
+The Claude adapter's original commit `ce9e609111c0664423337bad5c63babcab85c63b`
+passed 67 Python and 47 Node tests locally, an independent read-only review, and the complete
+[PR #3 CI matrix](https://github.com/bohselecta/OAI-Project-Skill/pull/3/checks).
+Release-readiness local checks passed **72 Python tests and 47 Node tests**, with no skips,
+on Python 3.12.14 / Node 24.19.0 / Linux. Both ZIPs were built twice identically, extracted
+and validated; all 92 relative Markdown links resolved. Official installation/model guidance
+links were reachable. A limited pattern review of current files and available history found
+no credential matches; this is not an exhaustive security audit. Exact final CI remains
+revision-specific and is linked from the release-readiness PR.
+
+**NOT_RUN:** authenticated Codex/Claude discovery, real model selection/switch/resume,
+model-backed behavioral comparisons, and marketplace acceptance. No native certification,
+cost/quality improvement, or broad production-readiness claim is made. The historical
+records below retain their original scope and do not substitute for current validation.
+
+## Historical local checks — 2026-09-29
 
 **58 deterministic tests passed, zero skipped**, on Python 3.13.5 / Linux x86_64. The run exercised package integrity/metadata, preservation of user configuration, install/idempotence/upgrade, uninstall/restore, injected rename-failure recovery, conflict/symlink rejection, deterministic archive/extraction, CLI scope handling, repository consistency, and fixture-checker positive and negative controls.
 
@@ -37,6 +60,6 @@ No model/API cost, speedup, quality improvement over a baseline, or general proj
 
 ## Remote CI
 
-The workflow defines Python 3.10 and 3.13 on Linux, plus Python 3.13 on macOS and Windows, with read-only repository permissions and pinned GitHub action revisions. Remote results belong to the exact PR commit and are not inferred from the local test run. The current result is recorded in [PR #1 checks](https://github.com/bohselecta/OAI-Project-Skill/pull/1/checks), not inferred or cached in this file.
+The workflow defines Python 3.10 and 3.13 on Linux, plus Python 3.13 on macOS and Windows, with read-only repository permissions and pinned GitHub action revisions. Remote results belong to the exact PR commit and are not inferred from the local test run. That historical result is recorded in [PR #1 checks](https://github.com/bohselecta/OAI-Project-Skill/pull/1/checks), not inferred or cached in this file.
 
 The initial run at `6456e8b4cbd585379f499410fa98675aaca5319b` passed Linux and macOS but exposed one Windows test-fixture defect: the fixture explicitly wrote CRLF through a text stream, which Windows translated again. The correction emits explicit bytes and adds a negative control that rejects malformed double-CRLF. No production-output assertion was relaxed. The CI actions were also moved from deprecated runtime versions to verified, SHA-pinned checkout v7.0.1 and setup-python v7.0.0. See the succeeding commit and its complete matrix for verification.

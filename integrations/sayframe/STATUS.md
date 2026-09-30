@@ -1,3 +1,5 @@
+> Historical connector snapshot (2026-09-29), retained as provenance. Later native/application checks are in [HANDOFF-STATUS](../../docs/HANDOFF-STATUS.md); current package/release evidence is in [VALIDATION](../../docs/VALIDATION.md). Branch and access statements below describe that original run.
+
 # SayFrame connector status
 
 Contract: [CONTRACT.md](CONTRACT.md), connector/protocol version 1.0.0 / sayframe.project/1.
