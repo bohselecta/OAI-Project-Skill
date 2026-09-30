@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="480" viewBox="0 0 1280 480" role="img" aria-labelledby="title desc">
+  <title id="title">Project — from clear intent to verified software</title>
+  <desc id="desc">Project is a workflow skill for Codex and Claude Code. It connects a user's goal to a frozen contract, a working build and acceptance evidence.</desc>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#253946" stroke-width="1"/></pattern>
+    <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#10252f"/><stop offset="1" stop-color="#0a171f"/></linearGradient>
+  </defs>
+  <rect width="1280" height="480" rx="24" fill="url(#surface)"/>
+  <rect x="640" width="640" height="480" rx="24" fill="url(#grid)" opacity="0.6"/>
+  <path d="M712 88 H1184 V384 H712" fill="none" stroke="#37535e" stroke-width="1.5"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="64" y="58" width="9" height="24" rx="2" fill="#9de4c8"/>
+    <text x="90" y="78" font-size="18" font-weight="700" letter-spacing="3" fill="#a8bebf">A WORKFLOW SKILL</text>
+    <text x="58" y="194" font-size="112" font-weight="700" letter-spacing="-6" fill="#f7f4eb">Project<tspan fill="#9de4c8">.</tspan></text>
+    <text x="64" y="256" font-size="33" font-weight="500" fill="#f7f4eb">Clear intent. Verified software.</text>
+    <text x="64" y="305" font-size="22" fill="#b8cbce">Contract Freeze + Model Cadence Valve</text>
+    <rect x="64" y="364" width="126" height="42" rx="21" fill="#203942" stroke="#48626b"/>
+    <text x="127" y="392" text-anchor="middle" font-size="19" fill="#edf4ee">Codex</text>
+    <rect x="204" y="364" width="190" height="42" rx="21" fill="#203942" stroke="#48626b"/>
+    <text x="299" y="392" text-anchor="middle" font-size="19" fill="#edf4ee">Claude Code</text>
+    <g transform="translate(738 109)">
+      <rect width="418" height="78" rx="12" fill="#172f38" stroke="#45606b"/>
+      <text x="24" y="46" font-size="18" font-weight="700" fill="#8fa9b0">01</text>
+      <text x="76" y="48" font-size="27" font-weight="700" fill="#f7f4eb">Define the outcome</text>
+      <path d="M208 79 V108 M201 101 L208 108 L215 101" stroke="#9de4c8" stroke-width="2" fill="none"/>
+      <rect y="110" width="418" height="78" rx="12" fill="#9de4c8"/>
+      <text x="24" y="157" font-size="18" font-weight="700" fill="#315950">02</text>
+      <text x="76" y="158" font-size="27" font-weight="700" fill="#102b2a">Build against a contract</text>
+      <path d="M208 189 V218 M201 211 L208 218 L215 211" stroke="#9de4c8" stroke-width="2" fill="none"/>
+      <rect y="220" width="418" height="78" rx="12" fill="#172f38" stroke="#45606b"/>
+      <text x="24" y="267" font-size="18" font-weight="700" fill="#8fa9b0">03</text>
+      <text x="76" y="268" font-size="27" font-weight="700" fill="#f7f4eb">Verify the result</text>
+    </g>
+  </g>
+</svg>

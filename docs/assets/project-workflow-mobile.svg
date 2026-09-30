@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="1140" viewBox="0 0 600 1140" role="img" aria-labelledby="title desc">
+<title id="title">Project development loop and model cadence</title><desc id="desc">Intent becomes a frozen contract, verified build slices and acceptance. Repair failed checks. Adjust effort when useful; checkpoint before a model change. Permissions stay unchanged.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#45655d" stroke-width="1.5"/></marker></defs>
+<rect x="1" y="1" width="598" height="1138" rx="22" fill="#f5f4ed" stroke="#d7ddd4" stroke-width="2"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="36" y="51" font-size="17" font-weight="700" letter-spacing="2" fill="#4f6c63">AN EVIDENCE-BACKED LOOP</text>
+<text x="36" y="99" font-size="36" font-weight="700" fill="#132d2c">Freeze the meaning.</text><text x="36" y="144" font-size="36" font-weight="700" fill="#132d2c">Adapt the effort.</text>
+<g stroke="#45655d" stroke-width="2" marker-end="url(#arrow)"><path d="M300 288 V317 M300 442 V471 M300 596 V625"/></g>
+<rect x="36" y="174" width="528" height="114" rx="14" fill="#fff" stroke="#cbd5ca"/>
+<text x="59" y="205" font-size="18" font-weight="700" fill="#657b72">01 / INTENT</text><text x="59" y="244" font-size="31" font-weight="700" fill="#132d2c">Your goal</text><text x="59" y="274" font-size="22" fill="#53685e">Scope + constraints</text>
+<rect x="36" y="328" width="528" height="114" rx="14" fill="#153d35"/>
+<text x="59" y="359" font-size="18" font-weight="700" fill="#acdcca">02 / CONTRACT FREEZE</text><text x="59" y="398" font-size="31" font-weight="700" fill="#fff">Define “done”</text><text x="59" y="428" font-size="22" fill="#d4e7de">Promises + checks</text>
+<rect x="36" y="482" width="528" height="114" rx="14" fill="#fff" stroke="#cbd5ca"/>
+<text x="59" y="513" font-size="18" font-weight="700" fill="#657b72">03 / BUILD</text><text x="59" y="552" font-size="31" font-weight="700" fill="#132d2c">Vertical slices</text><text x="59" y="582" font-size="22" fill="#53685e">Implement + exercise</text>
+<rect x="36" y="636" width="528" height="114" rx="14" fill="#fff" stroke="#cbd5ca"/>
+<text x="59" y="667" font-size="18" font-weight="700" fill="#657b72">04 / ACCEPTANCE</text><text x="59" y="706" font-size="31" font-weight="700" fill="#132d2c">Verify the promise</text><text x="59" y="736" font-size="22" fill="#53685e">Original goal + real evidence</text>
+<text x="36" y="789" font-size="22" fill="#45655d">Failed check? Repair + recheck.</text><text x="36" y="822" font-size="20" fill="#53685e">Material changes need evidence + authority.</text>
+<line x1="36" y1="850" x2="564" y2="850" stroke="#cbd5ca"/>
+<text x="36" y="889" font-size="18" font-weight="700" letter-spacing="2" fill="#4f6c63">MODEL CADENCE VALVE</text>
+<text x="36" y="929" font-size="27" font-weight="700" fill="#132d2c">Match effort to the work.</text>
+<text x="36" y="966" font-size="22" fill="#53685e">Reason · Build · Bounded transformations</text>
+<rect x="36" y="992" width="528" height="62" rx="10" fill="#e2eadd"/>
+<text x="59" y="1032" font-size="22" fill="#27473c">Checkpoint → choose a model → proceed</text>
+<text x="36" y="1095" font-size="22" fill="#53685e">Switch when useful. Permissions stay unchanged.</text>
+</g></svg>
