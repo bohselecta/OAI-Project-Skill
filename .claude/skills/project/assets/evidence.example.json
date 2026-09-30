@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "example_only": true,
+  "contract_revision": 1,
+  "source": {
+    "revision": null,
+    "diff_digest": null
+  },
+  "environment": null,
+  "reviewer": {
+    "mode": "same-session",
+    "model_observation": "unknown"
+  },
+  "checks": [
+    {
+      "id": "A-01",
+      "required": true,
+      "status": "NOT_RUN",
+      "method": null,
+      "expected": "Replace with the observable contract behavior.",
+      "observed": null,
+      "artifact": null
+    }
+  ],
+  "delivery": {
+    "authorized": false,
+    "status": "NOT_RUN",
+    "destination": null
+  },
+  "telemetry": {
+    "source": null,
+    "input_tokens": null,
+    "cached_input_tokens": null,
+    "output_tokens": null,
+    "reasoning_tokens_included_in_output": null
+  }
+}

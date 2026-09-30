@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "policy_version": "2026-09-30.claude.1",
+  "verified_on": "2026-09-30",
+  "review_after": "2026-10-30",
+  "status": "documented-not-host-evaluated",
+  "purpose": "Advisory Claude Code aliases for Project roles, not configuration or entitlements. Aliases resolve differently across providers and versions; observe the current runtime.",
+  "sources": [
+    {
+      "id": "claude-model-config",
+      "url": "https://code.claude.com/docs/en/model-config",
+      "kind": "official-product-documentation"
+    }
+  ],
+  "roles": {
+    "reasoner": {
+      "candidate_alias": "opus",
+      "suggested_use": "Resolve uncertain contracts, consequential architecture and difficult acceptance.",
+      "effort_policy": "Use only controls supported by the actual model and client; no fixed effort requirement.",
+      "sources": [
+        "claude-model-config"
+      ],
+      "workflow_evaluation": "NOT_RUN"
+    },
+    "builder": {
+      "candidate_alias": "sonnet",
+      "suggested_use": "Sustained construction against a coherent contract.",
+      "effort_policy": "Use only controls supported by the actual model and client; no fixed effort requirement.",
+      "sources": [
+        "claude-model-config"
+      ],
+      "workflow_evaluation": "NOT_RUN"
+    },
+    "mechanical": {
+      "candidate_alias": "haiku",
+      "suggested_use": "Optional bounded transformations with strong tests.",
+      "effort_policy": "Use only controls supported by the actual model and client; no fixed effort requirement.",
+      "sources": [
+        "claude-model-config"
+      ],
+      "workflow_evaluation": "NOT_RUN"
+    }
+  },
+  "fallback": "Keep the current capable model. Other available models may fill any role. Do not switch merely to match an alias.",
+  "constraints": [
+    "No automatic model calls, new paid usage, or global settings changes.",
+    "No automatic policy update during a build.",
+    "Aliases and documented capabilities do not prove workflow performance.",
+    "No cache, latency, price or entitlement guarantees."
+  ]
+}
