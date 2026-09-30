@@ -2,13 +2,12 @@
 
 Project remains the same canonical construction workflow. The optional native plugin adds a
 read-only intake skill and an authenticated connector; it does not add an agent scheduler or
-programmatic model switching. The stable plugin ID remains **project**. The 1.1.0 package
+programmatic model switching. The stable plugin ID remains **project**. The current package
 version is separate from the unchanged `sayframe.project/1` connector/SDK version 1.0.0.
 
 ## Install deliberately
 
-Use a complete checkout of this repository, not the Project Skill repository's historical
-README-only main. Validate the package first. The root portable `plugin.json`, `mcp.json`,
+Use a complete checkout of a reviewed revision of this repository. Validate the package first. The root portable `plugin.json`, `mcp.json`,
 `skills/` and `.agents/plugins/marketplace.json` make the local distribution. In a compatible
 Codex host, add this repository checkout as a local plugin marketplace, then install its
 **Project / OAI Project** entry. The configured marketplace ID is `oai-project-local`; the

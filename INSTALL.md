@@ -1,3 +1,5 @@
+> For Claude Code, use [the Claude installation guide](docs/CLAUDE-CODE.md); the commands below install the Codex package only.
+
 # Codex self-install directive
 
 The user requesting this directive authorizes a user-scoped installation of Project, not arbitrary changes to their development environment. Read and execute the following in a trusted checkout.

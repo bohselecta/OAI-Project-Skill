@@ -11,9 +11,9 @@ Project: implement ./PRODUCT-SPEC.md end-to-end.
 Project: finish this repository against its existing acceptance criteria.
 ```
 
-**Version:** 1.0.0 candidate · **License:** MIT · **Status:** offline package/tooling tests implemented; native-host behavioral evaluation pending. See [validation evidence](docs/VALIDATION.md).
+**Version:** 1.2.0 public preview · **License:** MIT · **Status:** offline tests and cross-platform CI; native-host behavioral evaluation pending. See [validation evidence](docs/VALIDATION.md).
 
-Project is a community project by Hayden Lindley, not an official OpenAI product. It requires an agent with suitable tools and permissions. It is not a hosted service, model router, or guarantee that any specification can be completed without an external decision.
+Project is a community project by Hayden Lindley, not an official OpenAI or Anthropic product. It requires an agent with suitable tools and permissions. It is not a hosted service, model router, or guarantee that any specification can be completed without an external decision.
 
 ## Why Project
 
@@ -25,7 +25,7 @@ The workflow scales down for small changes. It preserves existing systems and us
 
 ## Requirements
 
-Use a Codex/skill-capable client with filesystem and execution access for software construction. Model availability, tools, and approval controls depend on the host and account. A local skill does not automatically install into ChatGPT web.
+Use Codex, Claude Code, or a compatible skill-capable client with filesystem and execution access for software construction. Model availability, tools, and approval controls depend on the host and account. A local skill does not automatically install into ChatGPT web.
 
 The optional installer, validator, and fixture runner require **Python 3.10+**, with no third-party packages. The core skill is Markdown and JSON/YAML; it needs no daemon, MCP server, API key, hooks, or runtime dependency of its own. On Windows use `python` where `python3` is unavailable. Use a real, non-symlinked checkout/destination with this installer.
 
@@ -102,8 +102,8 @@ checks: [connector status](integrations/sayframe/STATUS.md).
 
 The optional connector SDK/CLI requires a modern browser or Node 22+, respectively; ordinary
 Project use and the Python installer remain unchanged. It does not launch Codex, grant new
-permissions or upload project content. Use the reviewed `codex/sayframe-connector` commit while
-this integration and its base candidate remain in review; do not assume it is already on main.
+permissions or upload project content. Both the connector and Claude Code adapter are on
+`main`; pin a reviewed commit for installation. Native-host trials remain pending.
 
 ## Updates, recovery, and extension
 
@@ -122,10 +122,18 @@ The core workflow is model-independent. The dated [model policy](skills/project/
 To make a deterministic standalone skill archive:
 
 ```bash
-python3 scripts/project_tool.py pack --out dist/project-skill-1.0.0.zip
+python3 scripts/project_tool.py pack --out dist/project-skill-1.2.0.zip
 ```
 
 The root [plugin.json](plugin.json) also packages the **same** `skills/project` directory using OpenAI's documented portable plugin layout. The canonical construction skill is not duplicated. Optional read-only MCP intake and a separate intake skill are provided; no lifecycle hook is introduced. Local skill installation, native plugin import, and public-directory publication are separate operations. See [distribution](docs/DISTRIBUTION.md); no directory submission or installation into your ChatGPT account is performed by this repository.
+
+## Public preview and release artifacts
+
+This repository is public source with tested offline packages, not a claim of broadly
+validated native-host behavior. See the [release guide](docs/RELEASE.md) for the release
+checklist, reproducible Codex/Claude ZIPs and SHA256SUMS, and remaining host trials.
+CI attaches both host packages and their checksums to each successful validation run.
+No marketplace listing or GitHub Release is implied by a version in this repository.
 
 ## License, contribution, and support
 

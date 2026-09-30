@@ -4,7 +4,7 @@ description: "Build software end-to-end from natural language or a specification
 argument-hint: "[build/finish/implement goal or specification]"
 license: MIT
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
 ---
 
 # Project for Claude Code

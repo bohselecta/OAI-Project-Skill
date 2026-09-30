@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "project",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Prepare a verified SayFrame handoff, then build with the canonical Project skill after the user says Proceed.",
   "author": {
     "name": "Hayden Lindley"

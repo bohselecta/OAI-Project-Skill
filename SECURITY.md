@@ -9,3 +9,5 @@ Backups stay outside skill discovery and are never deleted automatically. Handle
 `evals/run.py check --allow-exec` executes generated Python. Inspect that code first and run in a real disposable OS/container sandbox without secrets or network privileges. The fixture directory and timeout are not a security sandbox. Tests of prompt-injection resistance are behavioral scenarios, not a proof against all attacks.
 
 Do not put API keys, credentials, private chat logs, or personal data into fixtures, issues, telemetry, or PRs. Use a repository private vulnerability-reporting channel if the maintainer has enabled one. If unavailable, open only a minimal non-sensitive issue asking for a private channel; do not publish exploit details or secrets. Rotate exposed credentials through their provider, not through repository history edits alone.
+
+Claude Code users should preserve existing skill copies before copying the complete adapter; see [safe installation and recovery](docs/CLAUDE-CODE.md). Release SHA256SUMS checks archive bytes but does not authenticate the publisher. Neither adapter grants tools or bypasses host approvals.

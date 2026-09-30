@@ -6,6 +6,14 @@
 
 The tested Python installer supports user and repository skill locations. Its output does not establish plugin import or native skill discovery. Avoid installing both a standalone and a plugin copy in the same host unless you deliberately manage duplicate names.
 
+## Claude Code and release bundles
+
+The generated `.claude/skills/project` folder is Claude's complete standalone package.
+See [Claude installation](CLAUDE-CODE.md) for repository/personal scopes and [release
+artifacts](RELEASE.md) for deterministic host-specific ZIPs and checksum verification.
+The existing root OpenAI plugin is not a Claude plugin manifest. Both host distributions
+retain the same MIT license and canonical workflow; native discovery remains separately tested.
+
 ## Native plugin testing
 
 In a compatible current ChatGPT Work/Codex authoring environment, ask the available plugin-creator workflow to use this existing repository root as the **Project plugin with optional read-only SayFrame intake**, preserve its portable manifest, and register a local test source. Verify the supported client's current discovery/import path before writing a marketplace configuration. Use the checked-in local marketplace identity and populated read-only MCP entry. Do not add empty servers, invented public listing IDs, unnecessary hooks or an unapproved hosted backend.

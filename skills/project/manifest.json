@@ -1,7 +1,7 @@
 {
   "files": {
     "LICENSE": "ff264200b057c26c27ac731e715f60e9fec5ecf3fdea549e9622a4d55127c640",
-    "SKILL.md": "42244266a74cf43e67cefe5bb81f93c21c1bb1219c700ae3251bbb27ea088f9c",
+    "SKILL.md": "8ce751b04542eeb0d975458e4d0c2e6520e64b4dd7729dcf0ead53356d068504",
     "agents/openai.yaml": "51da7f2fee7dce5b9f310ecb548db4c610d30902415e178047f6520cc098eabb",
     "assets/evidence.example.json": "9d830feb4ede9bcc031954b22aa800ee903b51f435129100ce3f78a9844031c2",
     "references/acceptance.md": "77c62516f1161142e792ebf75be04d029a9c3c5c190ab9648bda3fe05b7b4071",
@@ -23,5 +23,5 @@
   },
   "format_version": 1,
   "package": "project",
-  "version": "1.1.0"
+  "version": "1.2.0"
 }
