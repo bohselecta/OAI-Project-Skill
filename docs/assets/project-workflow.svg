@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="610" viewBox="0 0 1200 610" role="img" aria-labelledby="title desc">
+  <title id="title">The Project development loop and model cadence</title>
+  <desc id="desc">Intent becomes a frozen contract, then verified build slices, then acceptance against the original requirements. Failed checks return to building. Material contract changes require evidence and authority. Model effort adapts to uncertainty and consequence; a useful manual switch is checkpointed before the user switches and says proceed.</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#45655d" stroke-width="1.5"/></marker></defs>
+  <rect x="1" y="1" width="1198" height="608" rx="22" fill="#f5f4ed" stroke="#d7ddd4" stroke-width="2"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="44" y="54" font-size="17" font-weight="700" letter-spacing="2.5" fill="#4f6c63">ONE GOAL. AN EVIDENCE-BACKED LOOP.</text>
+    <text x="44" y="102" font-size="33" font-weight="700" fill="#132d2c">Freeze the meaning. Adapt the effort.</text>
+    <path d="M257 208 H307 M542 208 H592 M827 208 H877" fill="none" stroke="#45655d" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="44" y="148" width="214" height="130" rx="14" fill="#ffffff" stroke="#cbd5ca"/>
+    <text x="65" y="179" font-size="16" font-weight="700" fill="#657b72">01 / INTENT</text>
+    <text x="65" y="220" font-size="26" font-weight="700" fill="#132d2c">Your goal</text>
+    <text x="65" y="253" font-size="19" fill="#53685e">Scope + constraints</text>
+    <rect x="310" y="148" width="234" height="130" rx="14" fill="#153d35"/>
+    <text x="331" y="179" font-size="16" font-weight="700" fill="#acdcca">02 / CONTRACT FREEZE</text>
+    <text x="331" y="220" font-size="26" font-weight="700" fill="#ffffff">Define “done”</text>
+    <text x="331" y="253" font-size="19" fill="#d4e7de">Promises + checks</text>
+    <rect x="596" y="148" width="234" height="130" rx="14" fill="#ffffff" stroke="#cbd5ca"/>
+    <text x="617" y="179" font-size="16" font-weight="700" fill="#657b72">03 / BUILD</text>
+    <text x="617" y="220" font-size="26" font-weight="700" fill="#132d2c">Vertical slices</text>
+    <text x="617" y="253" font-size="19" fill="#53685e">Implement + exercise</text>
+    <rect x="882" y="148" width="274" height="130" rx="14" fill="#ffffff" stroke="#cbd5ca"/>
+    <text x="903" y="179" font-size="16" font-weight="700" fill="#657b72">04 / ACCEPTANCE</text>
+    <text x="903" y="220" font-size="26" font-weight="700" fill="#132d2c">Verify the promise</text>
+    <text x="903" y="253" font-size="19" fill="#53685e">Original goal + real evidence</text>
+    <path d="M1016 279 V330 H714 V282" fill="none" stroke="#45655d" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="787" y="315" width="160" height="28" fill="#f5f4ed"/>
+    <text x="867" y="335" text-anchor="middle" font-size="18" fill="#45655d">Repair + recheck</text>
+    <text x="44" y="331" font-size="18" fill="#53685e">Material changes need evidence + authority.</text>
+    <line x1="44" y1="366" x2="1156" y2="366" stroke="#cbd5ca"/>
+    <text x="44" y="408" font-size="17" font-weight="700" letter-spacing="2" fill="#4f6c63">MODEL CADENCE VALVE</text>
+    <text x="44" y="448" font-size="24" font-weight="700" fill="#132d2c">Match effort to uncertainty and consequence.</text>
+    <g font-size="20" fill="#27473c">
+      <rect x="44" y="470" width="348" height="48" rx="9" fill="#e2eadd"/>
+      <text x="62" y="501">Reason through uncertainty</text>
+      <rect x="412" y="470" width="348" height="48" rx="9" fill="#e2eadd"/>
+      <text x="430" y="501">Build specified behavior</text>
+      <rect x="780" y="470" width="376" height="48" rx="9" fill="#e2eadd"/>
+      <text x="798" y="501">Batch bounded transformations</text>
+    </g>
+    <text x="44" y="563" font-size="20" fill="#53685e">Useful manual switch: checkpoint → choose a model → proceed. Permissions stay unchanged.</text>
+  </g>
+</svg>

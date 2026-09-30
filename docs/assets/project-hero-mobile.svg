@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="480" viewBox="0 0 600 480" role="img" aria-labelledby="title desc">
+<title id="title">Project — clear intent, verified software</title><desc id="desc">A workflow skill for Codex and Claude Code, using Contract Freeze and Model Cadence Valve.</desc>
+<rect width="600" height="480" rx="24" fill="#10252f"/>
+<path d="M430 0 V480 M470 0 V480 M510 0 V480 M550 0 V480 M0 80 H600 M0 120 H600 M0 160 H600 M0 200 H600 M0 240 H600 M0 280 H600 M0 320 H600 M0 360 H600 M0 400 H600" fill="none" stroke="#253946" opacity="0.4"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<rect x="40" y="45" width="8" height="24" rx="2" fill="#9de4c8"/>
+<text x="62" y="65" font-size="20" font-weight="700" letter-spacing="2" fill="#a8bebf">A WORKFLOW SKILL</text>
+<text x="34" y="184" font-size="116" font-weight="700" letter-spacing="-6" fill="#f7f4eb">Project<tspan fill="#9de4c8">.</tspan></text>
+<text x="40" y="251" font-size="38" font-weight="600" fill="#f7f4eb">Clear intent.</text>
+<text x="40" y="297" font-size="38" font-weight="600" fill="#f7f4eb">Verified software.</text>
+<text x="40" y="348" font-size="21" fill="#b8cbce">Contract Freeze + Model Cadence Valve</text>
+<rect x="40" y="386" width="130" height="46" rx="23" fill="#203942" stroke="#48626b"/><text x="105" y="416" text-anchor="middle" font-size="22" fill="#edf4ee">Codex</text>
+<rect x="184" y="386" width="200" height="46" rx="23" fill="#203942" stroke="#48626b"/><text x="284" y="416" text-anchor="middle" font-size="22" fill="#edf4ee">Claude Code</text>
+</g></svg>
